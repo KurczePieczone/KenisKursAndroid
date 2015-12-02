@@ -5,4 +5,5 @@
     <string name="toys">Toys</string>
     <string name="title_activity_kenis">KenisActivity</string>
     <string name="title_activity_toys">ToysActivity</string>
+    <string name="title_activity_note">NoteActivity</string>
 </resources>
