@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pl.digitalzombielab.kenistoys">
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -46,5 +46,4 @@
                 android:value="pl.digitalzombielab.kenistoys.ToysActivity" />
         </activity>
     </application>
-
 </manifest>

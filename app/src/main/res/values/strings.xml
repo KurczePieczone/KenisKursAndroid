@@ -6,4 +6,5 @@
     <string name="title_activity_kenis">KenisActivity</string>
     <string name="title_activity_toys">ToysActivity</string>
     <string name="title_activity_note">NoteActivity</string>
+    <string name="action_save">save</string>
 </resources>
