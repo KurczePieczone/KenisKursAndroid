@@ -122,4 +122,14 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
             getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
 
+    public void toysClick(View view) {
+        Intent intent = null;
+        switch (view.getId())
+        {
+            case R.id.fichesBtn:
+                intent = new Intent(ToysActivity.this, FichesActivity.class);
+                break;
+        }
+        startActivity(intent);
+    }
 }

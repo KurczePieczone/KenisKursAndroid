@@ -7,4 +7,8 @@
     <string name="title_activity_toys">Kenis Toys</string>
     <string name="title_activity_note">Kenis Toys</string>
     <string name="action_save">save</string>
+    <string name="fiches">Fiszki</string>
+    <string name="title_activity_fiches">FichesActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>
