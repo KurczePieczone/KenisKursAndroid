@@ -11,4 +11,10 @@
     <string name="title_activity_fiches">FichesActivity</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="title_activity_countdown">CountdownActivity</string>
+    <string name="countdown">Odliczanie</string>
+    <string name="start">Start</string>
+    <string name="notifyTitle">tytuł powiadomienia</string>
+    <string name="notifyBody">zawartość powiadomienia</string>
+    <string name="countdownValue">czas w sekundach</string>
 </resources>

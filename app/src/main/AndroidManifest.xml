@@ -67,6 +67,16 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widget_info" />
         </receiver>
+
+        <activity
+            android:name=".CountdownActivity"
+            android:label="@string/title_activity_countdown"
+            android:parentActivityName=".ToysActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.digitalzombielab.kenistoys.ToysActivity" />
+        </activity>
     </application>
 
 </manifest>
