@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,10 +15,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class CountdownActivity extends AppCompatActivity {
+public class CountdownActivity extends AppCompatActivity implements CommonColors {
 
-    EditText title, body, value;
-    Button start;
+    private EditText title, body, value;
+    private Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class CountdownActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNaviBarColor();
         title = (EditText) findViewById(R.id.notifyTitleET);
         body = (EditText) findViewById(R.id.notifyBodyET);
         value = (EditText) findViewById(R.id.notifyValueET);
@@ -48,5 +50,11 @@ public class CountdownActivity extends AppCompatActivity {
         notificationManager.notify(0, notifi);
 
 
+    }
+
+    @Override
+    public void setNaviBarColor() {
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+            getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
 }
