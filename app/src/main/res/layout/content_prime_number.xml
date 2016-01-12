@@ -9,26 +9,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pl.digitalzombielab.kenistoys.CountdownActivity"
-    tools:showIn="@layout/activity_countdown">
+    tools:context="pl.digitalzombielab.kenistoys.PrimeNumberActivity"
+    tools:showIn="@layout/activity_prime_number">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/notifyTitleET"
-        android:hint="@string/notifyTitle"
+        android:id="@+id/primeNumET"
+        android:hint="@string/whichNumber"
+        android:inputType="number"
+        android:text="@string/five"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/notifyBodyET"
-        android:hint="@string/notifyBody"
-        android:layout_below="@+id/notifyTitleET"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -38,24 +29,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start"
-        android:onClick="countdownClick"
-        android:id="@+id/countdownStartBtn"
-        android:layout_below="@+id/notifyBodyET"
+        android:id="@+id/primeNumStartBtn"
+        android:onClick="primeNumClick"
+        android:layout_below="@+id/primeNumET"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
-    <EditText
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/notifyValueET"
-        android:hint="@string/countdownValue"
-        android:layout_below="@+id/countdownStartBtn"
-        android:inputType="number"
-        android:text="@string/five"
+        android:id="@+id/primeNumPB"
+        android:visibility="invisible"
+        android:layout_below="@+id/primeNumStartBtn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/primeNumET"
+        android:layout_alignEnd="@+id/primeNumET" />
+
 </RelativeLayout>

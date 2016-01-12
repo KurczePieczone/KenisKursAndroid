@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -35,7 +36,23 @@ public class CountdownActivity extends AppCompatActivity implements CommonColors
     }
 
     public void countdownClick(View view) {
-        createNotifi();
+        long startTime = Long.parseLong(value.getText().toString());
+        startTime = startTime*1000;
+        new CountDownTimer(startTime, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                start.setEnabled(false);
+                value.setEnabled(false);
+                value.setText(""+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                createNotifi();
+                start.setEnabled(true);
+                value.setEnabled(true);
+            }
+        }.start();
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -48,8 +65,6 @@ public class CountdownActivity extends AppCompatActivity implements CommonColors
                 .build();
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(0, notifi);
-
-
     }
 
     @Override
@@ -57,4 +72,5 @@ public class CountdownActivity extends AppCompatActivity implements CommonColors
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
             getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
+
 }
