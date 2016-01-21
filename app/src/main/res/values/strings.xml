@@ -17,8 +17,10 @@
     <string name="notifyTitle">tytuł powiadomienia</string>
     <string name="notifyBody">zawartość powiadomienia</string>
     <string name="countdownValue">czas w sekundach</string>
-    <string name="primeNumer">Liczba pierwsza</string>
+    <string name="primeNumber">Liczba pierwsza</string>
     <string name="title_activity_prime_number">PrimeNumberActivity</string>
     <string name="five">5</string>
     <string name="whichNumber">którą liczbę pierwszą wyświetlić</string>
+    <string name="level">Poziomica</string>
+    <string name="title_activity_level">LevelActivity</string>
 </resources>
