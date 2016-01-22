@@ -88,11 +88,20 @@
         </activity>
         <activity
             android:name=".LevelActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_level"
             android:parentActivityName=".ToysActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden">
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.digitalzombielab.kenistoys.ToysActivity" />
+        </activity>
+        <activity
+            android:name=".DrawActivity"
+            android:label="@string/title_activity_draw"
+            android:parentActivityName=".ToysActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.digitalzombielab.kenistoys.ToysActivity" />

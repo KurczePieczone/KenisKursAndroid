@@ -60,5 +60,17 @@
         android:layout_alignRight="@+id/primeBtn"
         android:layout_alignEnd="@+id/primeBtn" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paint"
+        android:id="@+id/paintBtn"
+        android:onClick="toysClick"
+        android:layout_below="@+id/levelBtn"
+        android:layout_alignRight="@+id/levelBtn"
+        android:layout_alignEnd="@+id/levelBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>

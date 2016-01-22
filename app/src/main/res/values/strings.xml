@@ -23,4 +23,6 @@
     <string name="whichNumber">którą liczbę pierwszą wyświetlić</string>
     <string name="level">Poziomica</string>
     <string name="title_activity_level">LevelActivity</string>
+    <string name="title_activity_draw">DrawActivity</string>
+    <string name="paint">Malowanie</string>
 </resources>
