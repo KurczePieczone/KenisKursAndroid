@@ -13,7 +13,9 @@
     <string name="whichNumber">którą liczbę pierwszą wyświetlić (max 10 000)</string>
     <string name="takePhoto">Zrób zdjęcie</string>
     <string name="openGallery">Otwórz galerię</string>
-    
+    <string name="action_save">Zapisz</string>
+    <string name="intro">Aplikacja powstała jako część kursu z platformy Android, kurs jest dostępny na stronie Kenis.pl, kod źródłowy na github.com/migellal/KenisKursAndroid</string>
+
     <string-array name="activities">
         <item>Fiszki</item>
         <item>Odliczanie</item>
