@@ -3,21 +3,24 @@
     <string name="action_settings">Settings</string>
     <string name="kenis">Kenis</string>
     <string name="toys">Toys</string>
-    <string name="action_save">save</string>
-    <string name="fiches">Fiszki</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Dodaj widżet</string>
-    <string name="countdown">Odliczanie</string>
     <string name="start">Start</string>
     <string name="notifyTitle">tytuł powiadomienia</string>
     <string name="notifyBody">zawartość powiadomienia</string>
     <string name="countdownValue">czas w sekundach</string>
-    <string name="primeNumber">Liczba pierwsza</string>
     <string name="five">5</string>
     <string name="whichNumber">którą liczbę pierwszą wyświetlić (max 10 000)</string>
-    <string name="level">Poziomica</string>
-    <string name="paint">Malowanie</string>
     <string name="takePhoto">Zrób zdjęcie</string>
     <string name="openGallery">Otwórz galerię</string>
-    <string name="camera">Aparat</string>
+    
+    <string-array name="activities">
+        <item>Fiszki</item>
+        <item>Odliczanie</item>
+        <item>Liczba pierwsza</item>
+        <item>Poziomica</item>
+        <item>Malowanie</item>
+        <item>Aparat</item>
+    </string-array>
+
 </resources>

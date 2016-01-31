@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,6 +28,8 @@ import pl.digitalzombielab.kenistoys.R;
 public class ToysActivity extends AppCompatActivity implements CommonColors {
 
     final private int MULTIPLE_PERMISSIONS = 12345;
+    private ListView listView;
+    private String[] activities;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,30 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             insertPermissionsWrapper();
+        listView = (ListView) findViewById(R.id.listView);
+        initResources();
+        initActivitiesListView();
+    }
+
+    private void initResources()
+    {
+        Resources resources = getResources();
+        activities = resources.getStringArray(R.array.activities);
+    }
+
+    private void initActivitiesListView()
+    {
+        listView.setAdapter(new ArrayAdapter<String>(
+                getApplicationContext(),
+                android.R.layout.simple_list_item_1,
+                activities
+        ));
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                toysClick(position);
+            }
+        });
     }
 
     @Override
@@ -124,26 +154,29 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
             getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
 
-    public void toysClick(View view) {
+    public void toysClick(int pos) {
         Intent intent = null;
-        switch (view.getId())
+        switch (pos)
         {
-            case R.id.fichesBtn:
+            case 0:
                 intent = new Intent(ToysActivity.this, FichesActivity.class);
                 break;
-            case R.id.countdownBtn:
+            case 1:
                 intent = new Intent(ToysActivity.this, CountdownActivity.class);
                 break;
-            case R.id.primeBtn:
+            case 2:
                 intent = new Intent(ToysActivity.this, PrimeNumberActivity.class);
                 break;
-            case R.id.levelBtn:
+            case 3:
                 intent = new Intent(ToysActivity.this, LevelActivity.class);
                 break;
-            case R.id.paintBtn:
+            case 4:
                 intent = new Intent(ToysActivity.this, DrawActivity.class);
                 break;
-            case R.id.cameraBtn:
+            case 5:
+                intent = new Intent(ToysActivity.this, CameraActivity.class);
+                break;
+            default:
                 intent = new Intent(ToysActivity.this, CameraActivity.class);
                 break;
         }

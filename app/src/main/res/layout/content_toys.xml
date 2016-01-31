@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,78 +13,12 @@
     tools:context=".activities.ToysActivity"
     tools:showIn="@layout/activity_toys">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fiches"
-        android:id="@+id/fichesBtn"
-        android:onClick="toysClick"
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/countdown"
-        android:id="@+id/countdownBtn"
-        android:onClick="toysClick"
-        android:layout_below="@+id/fichesBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/primeNumber"
-        android:id="@+id/primeBtn"
-        android:onClick="toysClick"
-        android:layout_below="@+id/countdownBtn"
-        android:layout_alignRight="@+id/countdownBtn"
-        android:layout_alignEnd="@+id/countdownBtn"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/level"
-        android:id="@+id/levelBtn"
-        android:onClick="toysClick"
-        android:layout_below="@+id/primeBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/primeBtn"
-        android:layout_alignEnd="@+id/primeBtn" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/paint"
-        android:id="@+id/paintBtn"
-        android:onClick="toysClick"
-        android:layout_below="@+id/levelBtn"
-        android:layout_alignRight="@+id/levelBtn"
-        android:layout_alignEnd="@+id/levelBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/camera"
-        android:id="@+id/cameraBtn"
-        android:onClick="toysClick"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/paintBtn"
-        android:layout_alignRight="@+id/paintBtn"
-        android:layout_alignEnd="@+id/paintBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
 </RelativeLayout>
