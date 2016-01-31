@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +17,9 @@ import com.google.common.io.Files;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.nio.charset.Charset;
+
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
 
 public class FichesActivity extends AppCompatActivity implements CommonColors {
 

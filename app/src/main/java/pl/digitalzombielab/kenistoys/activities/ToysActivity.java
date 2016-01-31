@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +17,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
 
 public class ToysActivity extends AppCompatActivity implements CommonColors {
 

@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -7,25 +7,31 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 
-public class KenisActivity extends AppCompatActivity implements CommonColors {
+import java.util.concurrent.ExecutionException;
+
+import pl.digitalzombielab.kenistoys.BackgroundOperation;
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
+
+public class PrimeNumberActivity extends AppCompatActivity implements CommonColors {
+
+    //EditText whichPrime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kenis);
+        setContentView(R.layout.activity_prime_number);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setNaviBarColor();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //whichPrime = (EditText) findViewById(R.id.primeNumET);
+    }
+    public void primeNumClick(View view) {
+        new BackgroundOperation(this).execute();
     }
 
     @Override
@@ -34,5 +40,4 @@ public class KenisActivity extends AppCompatActivity implements CommonColors {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
             getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
-
 }

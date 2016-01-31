@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.content.Intent;
 import android.os.Build;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
 
 public class MainActivity extends AppCompatActivity implements CommonColors {
 

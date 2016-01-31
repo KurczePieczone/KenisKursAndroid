@@ -1,9 +1,10 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,10 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
-public class CameraActivity extends AppCompatActivity {
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
+
+public class CameraActivity extends AppCompatActivity implements CommonColors {
 
     private ImageView imageView;
     private Button takePhoto, openGallery;
@@ -29,7 +33,8 @@ public class CameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNaviBarColor();
         imageView = (ImageView) findViewById(R.id.imageView);
         takePhoto = (Button) findViewById(R.id.takePhotoBtn);
         openGallery = (Button) findViewById(R.id.openGalleryBtn);
@@ -78,5 +83,12 @@ public class CameraActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void setNaviBarColor()
+    {
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+            getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
     }
 }

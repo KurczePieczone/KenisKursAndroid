@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -15,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
 
 public class CountdownActivity extends AppCompatActivity implements CommonColors {
 
@@ -37,10 +40,13 @@ public class CountdownActivity extends AppCompatActivity implements CommonColors
 
     public void countdownClick(View view) {
         long startTime = Long.parseLong(value.getText().toString());
+        final String startT = value.getText().toString();
         startTime = startTime*1000;
         new CountDownTimer(startTime, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                title.setEnabled(false);
+                body.setEnabled(false);
                 start.setEnabled(false);
                 value.setEnabled(false);
                 value.setText(""+millisUntilFinished/1000);
@@ -49,8 +55,11 @@ public class CountdownActivity extends AppCompatActivity implements CommonColors
             @Override
             public void onFinish() {
                 createNotifi();
+                title.setEnabled(true);
+                body.setEnabled(true);
                 start.setEnabled(true);
                 value.setEnabled(true);
+                value.setText(startT);
             }
         }.start();
     }

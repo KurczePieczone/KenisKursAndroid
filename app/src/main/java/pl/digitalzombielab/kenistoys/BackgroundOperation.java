@@ -44,6 +44,8 @@ public class BackgroundOperation extends AsyncTask<Void, Void, String> {
     private String primeNumCalculate()
     {
         int which = Integer.parseInt(whichPrime.getText().toString());
+        if(which>10000)
+            which = 10000;
         int m = 0;
         int candidate = 1;
         while(m<=which)

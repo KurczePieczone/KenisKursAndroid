@@ -9,14 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pl.digitalzombielab.kenistoys.CameraActivity"
+    tools:context=".activities.CameraActivity"
     tools:showIn="@layout/activity_camera">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/ico"
+        android:src="@drawable/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

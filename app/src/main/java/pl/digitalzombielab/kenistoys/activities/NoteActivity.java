@@ -1,4 +1,4 @@
-package pl.digitalzombielab.kenistoys;
+package pl.digitalzombielab.kenistoys.activities;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
+import pl.digitalzombielab.kenistoys.CommonColors;
+import pl.digitalzombielab.kenistoys.R;
+
 public class NoteActivity extends AppCompatActivity implements CommonColors {
 
     EditText et;
@@ -28,6 +31,7 @@ public class NoteActivity extends AppCompatActivity implements CommonColors {
         setContentView(R.layout.activity_note);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setNaviBarColor();
         et = (EditText) findViewById(R.id.editText);
         et.setText(bundle.getString("et"));

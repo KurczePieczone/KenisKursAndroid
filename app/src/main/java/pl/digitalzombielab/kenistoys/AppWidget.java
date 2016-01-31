@@ -16,22 +16,15 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Random;
 
-/**
- * Implementation of App Widget functionality.
- */
 public class AppWidget extends AppWidgetProvider {
 
     private static String path = Environment.getExternalStorageDirectory() + "/Digital Zombie Lab/Kenis Toys/";
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId, int[] appWidgetIds) {
-        // TODO load file
         String content = getContent();
-        // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.app_widget);
         views.setTextViewText(R.id.appwidget_text, content);
-
-        // Instruct the widget manager to update the widget
         Intent intent = new Intent(context, AppWidget.class);
         intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
@@ -42,7 +35,6 @@ public class AppWidget extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        // There may be multiple widgets active, so update all of them
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId, appWidgetIds);
         }
