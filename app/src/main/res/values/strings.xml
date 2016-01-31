@@ -25,4 +25,8 @@
     <string name="title_activity_level">LevelActivity</string>
     <string name="title_activity_draw">DrawActivity</string>
     <string name="paint">Malowanie</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="takePhoto">Zrób zdjęcie</string>
+    <string name="openGallery">Otwórz galerię</string>
+    <string name="camera">Aparat</string>
 </resources>

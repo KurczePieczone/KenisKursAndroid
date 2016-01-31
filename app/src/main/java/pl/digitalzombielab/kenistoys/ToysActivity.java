@@ -141,6 +141,9 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
             case R.id.paintBtn:
                 intent = new Intent(ToysActivity.this, DrawActivity.class);
                 break;
+            case R.id.cameraBtn:
+                intent = new Intent(ToysActivity.this, CameraActivity.class);
+                break;
         }
         startActivity(intent);
     }

@@ -106,6 +106,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.digitalzombielab.kenistoys.ToysActivity" />
         </activity>
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

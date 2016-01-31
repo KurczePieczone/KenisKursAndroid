@@ -72,5 +72,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera"
+        android:id="@+id/cameraBtn"
+        android:onClick="toysClick"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/paintBtn"
+        android:layout_alignRight="@+id/paintBtn"
+        android:layout_alignEnd="@+id/paintBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
