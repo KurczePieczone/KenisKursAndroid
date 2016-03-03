@@ -1,6 +1,7 @@
 package pl.digitalzombielab.kenistoys.activities;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -98,6 +99,7 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
         }
     }
 
+    @TargetApi(23)
     private void insertPermissionsWrapper() {
         List<String> permissionsNeeded = new ArrayList<>();
 
@@ -138,6 +140,7 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
                 .show();
     }
 
+    @TargetApi(23)
     private boolean addPermission(List<String> permissionsList, String permission) {
         if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
             permissionsList.add(permission);
@@ -151,7 +154,7 @@ public class ToysActivity extends AppCompatActivity implements CommonColors {
     public void setNaviBarColor()
     {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
-            getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
+            getWindow().setNavigationBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
     }
 
     public void toysClick(int pos) {

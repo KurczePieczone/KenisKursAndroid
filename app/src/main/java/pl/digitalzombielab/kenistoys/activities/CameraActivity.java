@@ -89,6 +89,6 @@ public class CameraActivity extends AppCompatActivity implements CommonColors {
     public void setNaviBarColor()
     {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
-            getWindow().setNavigationBarColor(getApplicationContext().getColor(R.color.colorPrimaryDark));
+            getWindow().setNavigationBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
     }
 }
